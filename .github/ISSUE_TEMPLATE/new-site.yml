@@ -22,11 +22,41 @@ body:
       placeholder: Austin, Texas and nearby communities
     validations:
       required: true
+  - type: dropdown
+    id: operator_status
+    attributes:
+      label: Operating status
+      options:
+        - Operating business
+        - Authorized tenant or operator
+        - Rank-and-rent site waiting for an operator
+    validations:
+      required: true
+  - type: textarea
+    id: phone_address
+    attributes:
+      label: Phone and address status
+      description: State whether the phone is active or planned. For the address, choose a staffed customer-facing location, private service-area base, future address, virtual/mailbox, or none. Do not submit a private home address.
+    validations:
+      required: true
+  - type: dropdown
+    id: gbp_status
+    attributes:
+      label: Google Business Profile status
+      options:
+        - Verified and live
+        - Created but pending
+        - Planned later
+        - None
+        - Not eligible or lead-generation property
+        - Unsure
+    validations:
+      required: true
   - type: textarea
     id: brand
     attributes:
       label: Brand and visual direction
-      description: Include the name, voice, colors, assets, reference sites, and visual dislikes.
+      description: Include the name, voice, colors, asset paths, reference-site URLs or screenshots, and visual dislikes.
     validations:
       required: true
   - type: textarea
@@ -61,4 +91,3 @@ body:
       options:
         - label: I confirm the supplied business facts and claims are accurate and approved for publication.
           required: true
-

@@ -32,6 +32,7 @@ Never place secret values in this document.
 
 ## Lead routing
 
+- Phone status: Active / Planned / Form-only
 - Phone destination:
 - Form destination:
 - CRM/webhook:
@@ -40,6 +41,9 @@ Never place secret values in this document.
 
 ## SEO and analytics
 
+- Address status: Storefront / Private service-area / Future / Virtual or mailbox / None
+- Address published in content/schema: Yes / No / Not eligible
+- Google Business Profile status and URL:
 - Canonical domain:
 - Sitemap URL:
 - Robots behavior:
@@ -57,6 +61,8 @@ Never place secret values in this document.
 - [ ] Titles, descriptions, canonicals, and social metadata checked
 - [ ] Sitemap and robots directives checked
 - [ ] Structured data validated
+- [ ] Phone, address, and Google Business Profile output matches verified intake status
+- [ ] Future, virtual, mailbox, private service-area, and unstaffed addresses are not published
 - [ ] Broken links and missing assets checked
 - [ ] Production build completed without avoidable errors
 - [ ] Placeholder content removed or listed below
@@ -78,4 +84,3 @@ Never place secret values in this document.
 ## Known limitations
 
 - None / list:
-

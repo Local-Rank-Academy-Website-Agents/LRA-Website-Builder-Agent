@@ -28,6 +28,8 @@ Use this as the acceptance checklist for every delivered site.
 - Structured data matches visible, verified page content.
 - Sitemap and robots directives match the intended indexation strategy.
 - No fake address, fake review, unsupported credential, or guaranteed result appears.
+- Future, virtual, mailbox, private service-area, and unstaffed addresses are omitted from public content and `LocalBusiness` address schema.
+- Google Business Profile references match an eligible, real operator and verified profile status.
 
 ## Performance and accessibility
 
@@ -56,4 +58,3 @@ Use this as the acceptance checklist for every delivered site.
 - Forms, analytics, consent, domain, DNS, and ownership transfer are documented.
 - A post-deployment smoke-test list is included.
 - Known limitations are stated explicitly.
-

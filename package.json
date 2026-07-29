@@ -1,0 +1,8 @@
+{
+  "name": "lra-website-builder-agent",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build-website": "node .agents/skills/build-website/scripts/intake.mjs"
+  }
+}

@@ -8,6 +8,8 @@
 - Deadline:
 - Preferred stack/host:
 - Deployment is in scope: No by default
+- Build mode: Autopilot / Approve plan first
+- Operating status: Operating business / Authorized operator / Awaiting operator
 
 ## Market
 
@@ -33,9 +35,14 @@
 
 ## Verified business facts
 
-- Phone:
+- Phone status: Active / Planned later / Form-only
+- Active phone:
 - Email:
-- Address or service-area-only:
+- Address status: Customer-facing storefront / Private service-area base / Future / Virtual or mailbox / None
+- Verified customer-facing address:
+- Private address planning notes:
+- Google Business Profile status: Verified / Pending / Planned / None / Not eligible / Unsure
+- Google Business Profile URL:
 - Hours:
 - Licenses/certifications:
 - Insurance:
@@ -46,6 +53,7 @@
 - Other proof:
 
 Do not use a fact that has not been verified by the project owner.
+Do not publish a future, virtual, mailbox, or unstaffed address as a current location or include it in `LocalBusiness` address schema.
 
 ## Content and pages
 
@@ -55,6 +63,7 @@ Do not use a fact that has not been verified by the project owner.
 - FAQs:
 - Existing copy:
 - Competitor/reference URLs:
+- Reference screenshots:
 - Legal pages:
 - Exclusions:
 
@@ -83,4 +92,3 @@ Do not use a fact that has not been verified by the project owner.
 - Required launch checks:
 - Known constraints:
 - Approver:
-

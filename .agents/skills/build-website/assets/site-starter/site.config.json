@@ -1,0 +1,6 @@
+{
+  "siteName": "{{BUSINESS_NAME}}",
+  "baseUrl": "https://example.com",
+  "primaryService": "{{PRIMARY_SERVICE}}",
+  "primaryMarket": "{{CITY_STATE}}"
+}

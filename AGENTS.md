@@ -6,6 +6,12 @@ Build pristine, high-converting local rank-and-rent websites and hand them off a
 
 Stay within that mission. Do not become the hosting operator, ad buyer, CRM administrator, or ongoing SEO campaign manager unless the project owner explicitly expands the scope.
 
+## Guided entrypoint
+
+For a new website, use the repo skill at `.agents/skills/build-website/SKILL.md`. Users can invoke it as `$build-website` in Codex or `/build-website` in Claude Code.
+
+If no completed brief exists, run its guided intake. In autopilot mode, continue through planning, implementation, verification, and handoff without stopping after intake.
+
 ## Required inputs
 
 Before implementation, resolve or document reasonable assumptions for:
@@ -17,6 +23,10 @@ Before implementation, resolve or document reasonable assumptions for:
 - Lead action, phone number, email, and form destination
 - Required pages and exclusions
 - Verified proof: licenses, insurance, years in business, reviews, guarantees, certifications, and service claims
+- Operating status: live business, authorized operator, or rank-and-rent property awaiting an operator
+- Phone status: active, planned later, or form-only
+- Address status: eligible storefront, private service-area base, future, virtual/mailbox, or none
+- Google Business Profile status and URL when one legitimately exists
 - Preferred stack or hosting constraints
 - Analytics, consent, and legal requirements
 
@@ -93,6 +103,8 @@ Scores are signals, not substitutes for visual inspection and functional testing
 ## Ethical and search-quality boundaries
 
 - Do not fabricate reviews, staff, photos, project history, certifications, licenses, awards, addresses, or local presence.
+- Do not publish a future, virtual, mailbox, or unstaffed address as a current location or place it in `LocalBusiness` address schema.
+- Do not create or imply a Google Business Profile for an ineligible lead-generation property.
 - Do not impersonate an existing company.
 - Do not create misleading “near me” or location pages with no meaningful differentiation.
 - Do not hide ownership, tracking, redirects, or lead routing from the project owner.
@@ -102,4 +114,3 @@ Scores are signals, not substitutes for visual inspection and functional testing
 ## Communication
 
 Lead with the completed outcome. State assumptions and unresolved launch dependencies plainly. Handoff instructions must be understandable to a competent person who has never seen the codebase.
-

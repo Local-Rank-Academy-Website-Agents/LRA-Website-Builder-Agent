@@ -1,0 +1,4 @@
+interface:
+  display_name: "Build Website"
+  short_description: "Guided rank-and-rent website production"
+  default_prompt: "Use $build-website to collect my site details and build a complete deployment-ready local-service website."
