@@ -1,0 +1,64 @@
+name: New rank-and-rent website
+description: Request a new local lead-generation website build
+title: "[Site]: "
+labels:
+  - new-site
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Provide verified facts only. The builder will not invent reviews, credentials, addresses, or guarantees.
+  - type: input
+    id: niche
+    attributes:
+      label: Niche and primary service
+      placeholder: Residential roofing and roof replacement
+    validations:
+      required: true
+  - type: input
+    id: market
+    attributes:
+      label: Primary market and service area
+      placeholder: Austin, Texas and nearby communities
+    validations:
+      required: true
+  - type: textarea
+    id: brand
+    attributes:
+      label: Brand and visual direction
+      description: Include the name, voice, colors, assets, reference sites, and visual dislikes.
+    validations:
+      required: true
+  - type: textarea
+    id: pages
+    attributes:
+      label: Required pages, services, and locations
+    validations:
+      required: true
+  - type: textarea
+    id: proof
+    attributes:
+      label: Verified trust facts
+      description: Licenses, insurance, reviews, experience, guarantees, certifications, and other approved claims.
+    validations:
+      required: true
+  - type: textarea
+    id: routing
+    attributes:
+      label: Lead routing
+      description: Phone, email, form destination, CRM/webhook, required fields, and spam protection.
+    validations:
+      required: true
+  - type: textarea
+    id: technical
+    attributes:
+      label: Hosting and technical constraints
+      description: Preferred stack, host, domain, analytics, consent, integrations, redirects, and deadlines.
+  - type: checkboxes
+    id: confirmation
+    attributes:
+      label: Confirmation
+      options:
+        - label: I confirm the supplied business facts and claims are accurate and approved for publication.
+          required: true
+

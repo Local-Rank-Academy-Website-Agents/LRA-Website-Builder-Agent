@@ -1,0 +1,28 @@
+# Dependencies and builds
+node_modules/
+.astro/
+.next/
+.nuxt/
+.svelte-kit/
+dist/
+build/
+out/
+
+# Local configuration and secrets
+.env
+.env.*
+!.env.example
+*.local
+
+# Test and audit output
+coverage/
+.lighthouseci/
+playwright-report/
+test-results/
+
+# Editor and OS files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
