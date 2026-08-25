@@ -1,0 +1,13 @@
+{
+  "name": "leak-detection-houston-pros",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "generate": "node scripts/generate-site.mjs && node scripts/generate-docs.mjs",
+    "check": "node scripts/generate-site.mjs && node scripts/generate-docs.mjs && node scripts/check.mjs",
+    "build": "node scripts/generate-site.mjs && node scripts/generate-docs.mjs && node scripts/check.mjs && node scripts/build.mjs",
+    "dev": "node scripts/serve.mjs",
+    "view": "node scripts/serve.mjs --open"
+  }
+}
