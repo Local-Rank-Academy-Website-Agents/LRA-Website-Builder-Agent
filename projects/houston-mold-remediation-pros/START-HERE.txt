@@ -1,0 +1,12 @@
+HOUSTON MOLD REMEDIATION PROS — LOCAL PREVIEW
+
+1. Double-click VIEW-SITE.cmd in this folder.
+2. Keep the command window open.
+3. Open http://localhost:4173/
+
+If the browser does not open automatically, copy that address into it.
+
+Do not open individual files inside site or dist. The website uses root-relative
+links and must be served through localhost. Screenshots are previews only.
+
+Requirement: Node.js 20 or newer.

@@ -3,6 +3,13 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build-website": "node .agents/skills/build-website/scripts/intake.mjs"
+    "build": "npm run factory:build",
+    "build-website": "node .agents/skills/build-website/scripts/intake.mjs",
+    "audit:plumbing-sites": "node scripts/audit-houston-plumbing-rank-rents.mjs",
+    "audit:plumbing-seo": "node scripts/audit-houston-plumbing-launch-readiness.mjs",
+    "factory:check": "node scripts/site-portfolio-check.mjs",
+    "factory:build": "node scripts/site-portfolio-check.mjs --build",
+    "factory:launch": "node scripts/site-launch.mjs",
+    "factory:verify": "node scripts/site-verify-live.mjs"
   }
 }

@@ -4,6 +4,7 @@ node_modules/
 .next/
 .nuxt/
 .svelte-kit/
+.vercel/
 dist/
 build/
 out/
@@ -25,4 +26,3 @@ test-results/
 Thumbs.db
 .idea/
 .vscode/
-

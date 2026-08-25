@@ -1,0 +1,44 @@
+name: Portfolio checks
+
+on:
+  pull_request:
+    paths:
+      - "projects/**"
+      - "portfolio/**"
+      - "scripts/site-*.mjs"
+      - "scripts/lib/site-factory.mjs"
+      - ".github/workflows/**"
+  push:
+    branches:
+      - main
+    paths:
+      - "projects/**"
+      - "portfolio/**"
+      - "scripts/site-*.mjs"
+      - "scripts/lib/site-factory.mjs"
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+
+      - name: Install changed managed sites
+        shell: bash
+        run: |
+          while IFS= read -r directory; do
+            [[ -z "$directory" ]] && continue
+            npm ci --prefix "$directory"
+          done < <(node -e 'const m=require("./portfolio/sites.json"); for(const s of m.sites.filter(x=>x.managed)) console.log(s.directory)')
+
+      - name: Validate and build the portfolio
+        run: node scripts/site-portfolio-check.mjs --build --changed

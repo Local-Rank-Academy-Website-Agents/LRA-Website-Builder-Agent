@@ -1,0 +1,90 @@
+{
+  "researchedAt": "2026-08-25",
+  "market": "Houston, Texas",
+  "method": "Live DataForSEO keyword overview and top-organic-result intent review",
+  "dataForSeoCost": 0.0332,
+  "opportunities": [
+    {
+      "priority": 1,
+      "slug": "houston-water-filtration-softening",
+      "property": "Houston Water Filtration and Softening",
+      "primaryKeyword": "water filtration system houston",
+      "searchVolume": 390,
+      "cpc": 21.84,
+      "moneySerp": "9/9",
+      "supportingKeyword": "water softener installation houston",
+      "supportingSearchVolume": 260,
+      "supportingCpc": 8.61,
+      "supportingMoneySerp": "8/9",
+      "disposition": "Build one specialist property; keep the two overlapping money intents in one coherent architecture."
+    },
+    {
+      "priority": 2,
+      "slug": "houston-repiping-pros",
+      "property": "Houston Repiping Pros",
+      "primaryKeyword": "repipe houston",
+      "searchVolume": 90,
+      "cpc": 95.22,
+      "moneySerp": "7/9",
+      "disposition": "Build as a high-ticket specialist property."
+    },
+    {
+      "priority": 3,
+      "slug": "houston-sewer-line-repair",
+      "property": "Houston Sewer Line Repair",
+      "primaryKeyword": "sewer line repair houston",
+      "searchVolume": 110,
+      "cpc": 17.04,
+      "moneySerp": "8/9",
+      "supportingKeyword": "trenchless sewer repair houston",
+      "supportingSearchVolume": 30,
+      "supportingCpc": 10.52,
+      "disposition": "Build separately from clearing and hydro jetting; repair and replacement own the conversion path."
+    },
+    {
+      "priority": 4,
+      "slug": "commercial-plumber-houston",
+      "property": "Commercial Plumber Houston",
+      "primaryKeyword": "commercial plumber houston",
+      "searchVolume": 320,
+      "cpc": 36.81,
+      "moneySerp": "8/9",
+      "disposition": "Build only for an operator that can fulfill commercial scopes."
+    },
+    {
+      "priority": 5,
+      "slug": "houston-gas-line-repair",
+      "property": "Houston Gas Line Repair",
+      "primaryKeyword": "gas line repair houston",
+      "searchVolume": 50,
+      "cpc": 5.38,
+      "moneySerp": "8/9",
+      "disposition": "Operator-gated because licensing, safety, and emergency handling must be verified."
+    },
+    {
+      "priority": 6,
+      "slug": "houston-backflow-testing",
+      "property": "Houston Backflow Testing",
+      "primaryKeyword": "backflow testing houston",
+      "searchVolume": 30,
+      "cpc": 27.37,
+      "moneySerp": "6/9",
+      "disposition": "Operator-gated; Houston requires an accepted TCEQ-licensed tester."
+    }
+  ],
+  "deferred": [
+    {
+      "primaryKeyword": "emergency plumber houston",
+      "searchVolume": 480,
+      "cpc": 64.16,
+      "moneySerp": "8/9",
+      "reason": "Overlaps the general plumber property and cannot publish 24-hour or emergency claims without a verified operator and live call routing."
+    },
+    {
+      "primaryKeyword": "garbage disposal repair houston",
+      "searchVolume": 20,
+      "cpc": 97.88,
+      "reason": "Better as a service page within the general plumber property than as a standalone domain."
+    }
+  ]
+}

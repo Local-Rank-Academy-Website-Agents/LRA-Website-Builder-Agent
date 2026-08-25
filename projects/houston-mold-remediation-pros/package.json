@@ -1,0 +1,12 @@
+{
+  "name": "lra-local-service-site",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "generate": "node scripts/generate-site.mjs",
+    "check": "node scripts/generate-site.mjs && node scripts/check.mjs",
+    "build": "node scripts/generate-site.mjs && node scripts/check.mjs && node scripts/build.mjs",
+    "dev": "node scripts/serve.mjs",
+    "view": "node scripts/serve.mjs --open"
+  }
+}

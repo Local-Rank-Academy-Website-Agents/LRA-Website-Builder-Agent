@@ -1,0 +1,8 @@
+# Store real values in a secure local vault or GitHub environment secrets.
+# Never commit populated values.
+VERCEL_TOKEN=
+CLOUDFLARE_API_TOKEN=
+
+# Optional overrides. Defaults live in portfolio/sites.json.
+VERCEL_SCOPE=tristans-projects-e26a06f0
+VERCEL_CLI_VERSION=59.5.0

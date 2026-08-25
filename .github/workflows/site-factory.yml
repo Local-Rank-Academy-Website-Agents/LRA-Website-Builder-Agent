@@ -1,0 +1,64 @@
+name: Site factory
+
+on:
+  workflow_dispatch:
+    inputs:
+      site:
+        description: Registered slug from portfolio/sites.json
+        required: true
+        type: string
+      target:
+        description: Deployment target
+        required: true
+        default: preview
+        type: choice
+        options:
+          - preview
+          - production
+      domain:
+        description: Optional apex domain already recorded in the portfolio manifest
+        required: false
+        type: string
+      configure_dns:
+        description: Configure Cloudflare DNS using the protected token
+        required: true
+        default: false
+        type: boolean
+      public_access:
+        description: Disable Vercel Authentication for this public static site
+        required: true
+        default: false
+        type: boolean
+
+permissions:
+  contents: read
+
+jobs:
+  launch:
+    runs-on: ubuntu-latest
+    environment: ${{ inputs.target == 'production' && 'production' || 'preview' }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+
+      - name: Validate portfolio
+        run: node scripts/site-portfolio-check.mjs
+
+      - name: Install selected site
+        run: npm ci --prefix "projects/${{ inputs.site }}"
+
+      - name: Build, deploy, and verify
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+        shell: bash
+        run: |
+          args=(--site "${{ inputs.site }}")
+          if [[ "${{ inputs.target }}" == "production" ]]; then args+=(--production); fi
+          if [[ -n "${{ inputs.domain }}" ]]; then args+=(--domain "${{ inputs.domain }}"); fi
+          if [[ "${{ inputs.configure_dns }}" == "true" ]]; then args+=(--configure-dns); fi
+          if [[ "${{ inputs.public_access }}" == "true" ]]; then args+=(--public-access); fi
+          node scripts/site-launch.mjs "${args[@]}"

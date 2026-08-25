@@ -1,0 +1,86 @@
+{
+  "version": 1,
+  "defaults": {
+    "vercelScope": "tristans-projects-e26a06f0",
+    "vercelCliVersion": "59.5.0",
+    "canonicalPrefix": "www",
+    "dnsProvider": "cloudflare",
+    "indexingEnabled": false
+  },
+  "sites": [
+    {
+      "slug": "drain-cleaning-of-houston",
+      "directory": "projects/drain-cleaning-of-houston",
+      "vercelProject": "drain-cleaning-of-houston",
+      "domain": null,
+      "status": "build-ready",
+      "managed": true,
+      "operatorStatus": "awaiting-operator",
+      "leadRoutingStatus": "not-connected"
+    },
+    {
+      "slug": "houston-mold-remediation-pros",
+      "directory": "projects/houston-mold-remediation-pros",
+      "vercelProject": "houston-mold-remediation-pros",
+      "domain": null,
+      "status": "build-ready",
+      "managed": true,
+      "operatorStatus": "awaiting-operator",
+      "leadRoutingStatus": "not-connected"
+    },
+    {
+      "slug": "hydro-jetting-houston",
+      "directory": "projects/hydro-jetting-houston",
+      "vercelProject": "hydro-jetting-houston",
+      "vercelProjectId": "prj_ElxEW9sUYnutmvd33iDJVcHhk6Gd",
+      "domain": null,
+      "status": "build-ready",
+      "managed": true,
+      "operatorStatus": "awaiting-operator",
+      "leadRoutingStatus": "not-connected"
+    },
+    {
+      "slug": "leak-detection-houston-pros",
+      "directory": "projects/leak-detection-houston-pros",
+      "vercelProject": "leak-detection-houston-pros",
+      "vercelProjectId": "prj_ITiyFrGycT8nUNXG1LLURbf1mRCA",
+      "domain": "leakdetection-houston.com",
+      "canonicalHost": "www.leakdetection-houston.com",
+      "status": "production-noindex",
+      "managed": true,
+      "operatorStatus": "awaiting-operator",
+      "leadRoutingStatus": "not-connected"
+    },
+    {
+      "slug": "plumber-houston-pros",
+      "directory": "projects/plumber-houston-pros",
+      "vercelProject": "plumber-houston-pros",
+      "domain": null,
+      "status": "build-ready",
+      "managed": true,
+      "operatorStatus": "awaiting-operator",
+      "leadRoutingStatus": "not-connected"
+    },
+    {
+      "slug": "water-heater-installers-of-houston",
+      "directory": "projects/water-heater-installers-of-houston",
+      "vercelProject": "water-heater-installers-of-houston",
+      "domain": null,
+      "status": "build-ready",
+      "managed": true,
+      "operatorStatus": "awaiting-operator",
+      "leadRoutingStatus": "not-connected"
+    },
+    {
+      "slug": "water-heater-repair-houston",
+      "directory": "projects/water-heater-repair-houston",
+      "vercelProject": null,
+      "domain": "waterheater-repairhouston.com",
+      "canonicalHost": "www.waterheater-repairhouston.com",
+      "status": "existing-production",
+      "managed": false,
+      "operatorStatus": "external-existing-site",
+      "leadRoutingStatus": "external-existing-site"
+    }
+  ]
+}
