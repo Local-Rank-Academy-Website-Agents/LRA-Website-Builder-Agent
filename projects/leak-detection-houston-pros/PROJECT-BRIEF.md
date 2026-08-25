@@ -3,7 +3,7 @@
 ## Project
 
 - Project name: Leak Detection Houston Pros
-- Temporary hosted domain: `https://leak-detection-houston-pros-tristans-projects-e26a06f0.vercel.app`; final custom domain pending
+- Temporary hosted domain: `https://leak-detection-houston-pros.vercel.app`; final custom domain pending
 - Stack: Portable zero-dependency static HTML/CSS/JavaScript
 - Deployment: Not in scope
 - Build mode: Autopilot after concept approval

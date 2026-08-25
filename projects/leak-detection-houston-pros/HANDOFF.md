@@ -44,7 +44,7 @@ Never place secret values in this document.
 - Address status: None
 - Address published in content/schema: No; not eligible
 - Google Business Profile status and URL: None
-- Canonical domain: `https://leak-detection-houston-pros-tristans-projects-e26a06f0.vercel.app` temporary production host
+- Canonical domain: `https://leak-detection-houston-pros.vercel.app` temporary production host
 - Sitemap URL: `/sitemap.xml`
 - Robots behavior: `Disallow: /` while `indexingEnabled` is false
 - Structured data types: `WebSite`, `BreadcrumbList`, and visible-content-matched `FAQPage`
