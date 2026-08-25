@@ -7,7 +7,7 @@ The site is fully buildable and previewable, but it must remain noindex and form
 - [ ] Contract and verify an eligible operator authorized to receive and perform work.
 - [ ] Confirm the seven-service scope; remove unsupported services and their city matrices before indexing.
 - [ ] Confirm intended coverage for every market and ZIP code; remove unsupported markets before indexing.
-- [ ] Replace the temporary Vercel `baseUrl` with the final custom HTTPS domain when one is assigned.
+- [x] Replace the temporary Vercel `baseUrl` with the final custom HTTPS domain. Completed 2026-08-25.
 - [ ] Keep `indexingEnabled` false until the domain, operator, coverage, content, and routing are verified.
 - [ ] Connect `formEndpoint`; test success, validation, spam control, privacy handling, and errors end to end.
 - [ ] Add a controlled phone number only if supplied; update maintained configuration and generated output, then rebuild and test every `tel:` link.

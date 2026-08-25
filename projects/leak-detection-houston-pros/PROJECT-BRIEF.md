@@ -3,9 +3,10 @@
 ## Project
 
 - Project name: Leak Detection Houston Pros
-- Temporary hosted domain: `https://leak-detection-houston-pros.vercel.app`; final custom domain pending
+- Primary hosted domain: `https://www.leakdetection-houston.com`
+- Apex domain: `https://leakdetection-houston.com` redirects permanently to the primary www host
 - Stack: Portable zero-dependency static HTML/CSS/JavaScript
-- Deployment: Not in scope
+- Deployment: Vercel production project with Cloudflare-managed DNS
 - Build mode: Autopilot after concept approval
 - Operating status: Rank-and-rent property awaiting an operator
 

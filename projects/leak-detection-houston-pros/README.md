@@ -7,7 +7,7 @@ Portable static rank-and-rent website for a pre-launch Greater Houston leak-dete
 This build is intentionally pre-launch:
 
 - Indexing is disabled in `site.config.json` and `robots.txt`.
-- The canonical host is the temporary Vercel production domain; a final custom domain is still pending.
+- The canonical host is `https://www.leakdetection-houston.com`; the apex host redirects permanently to www.
 - No phone number, address, Google Business Profile, reviews, credentials, operator claims, or fabricated proof are published.
 - Forms validate and show a completed-review state but do not transmit or retain submissions.
 
@@ -54,11 +54,10 @@ Upload the contents of `dist/` to any static host. `vercel.json` supplies clean-
 
 Before deployment:
 
-1. Replace the temporary Vercel base URL in `site.config.json` when the final custom domain is ready.
-2. Verify the operator and true service coverage.
-3. Connect and test an authorized lead destination and spam control.
-4. Add only verified contact, trust, and business details.
-5. Add analytics/consent configuration if required.
-6. Set `indexingEnabled` to `true`, rebuild, and inspect the output.
+1. Verify the operator and true service coverage.
+2. Connect and test an authorized lead destination and spam control.
+3. Add only verified contact, trust, and business details.
+4. Add analytics/consent configuration if required.
+5. Set `indexingEnabled` to `true`, rebuild, and inspect the output.
 
 No secrets or machine-specific paths are required by the generated site.

@@ -26,7 +26,7 @@
 - Environment variable names and purposes: None currently
 - Redirect/rewrite requirements: Directory-index routing, trailing slashes, clean URLs, and `404.html`; Vercel settings are included
 - Custom headers: None currently
-- Domain and DNS steps: Replace the temporary Vercel base URL when a verified custom domain is ready, rebuild, connect DNS, select the preferred hostname, and test redirects
+- Domain and DNS: Cloudflare manages the zone. Apex and www are DNS-only CNAME records to Vercel's assigned project target; www is canonical and apex redirects permanently to www
 
 Never place secret values in this document.
 
@@ -44,7 +44,7 @@ Never place secret values in this document.
 - Address status: None
 - Address published in content/schema: No; not eligible
 - Google Business Profile status and URL: None
-- Canonical domain: `https://leak-detection-houston-pros.vercel.app` temporary production host
+- Canonical domain: `https://www.leakdetection-houston.com`
 - Sitemap URL: `/sitemap.xml`
 - Robots behavior: `Disallow: /` while `indexingEnabled` is false
 - Structured data types: `WebSite`, `BreadcrumbList`, and visible-content-matched `FAQPage`
@@ -93,7 +93,7 @@ Never place secret values in this document.
 
 ## Remaining launch dependencies
 
-- Confirm the final domain and canonical host.
+- Maintain `https://www.leakdetection-houston.com` as the canonical host unless a deliberate migration is planned.
 - Verify the operator, service availability, and exact coverage for all 43 proposed markets.
 - Assign and test the lead-routing destination, data-retention policy, and spam protection.
 - Supply an active phone number only if calls will be answered.
@@ -107,4 +107,4 @@ Never place secret values in this document.
 - Forms intentionally do not send or store data.
 - Coverage statements are framed as intended or pending verification.
 - No Lighthouse score was recorded; structural, browser, console, responsive, and axe-core checks were completed instead.
-- Deployment and live-domain smoke testing are outside this delivery and were not requested.
+- The Vercel deployment and custom-domain setup were authorized and completed on 2026-08-25.
