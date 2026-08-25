@@ -14,12 +14,16 @@ for (const candidate of manifest.sites) {
     if (seenSlugs.has(candidate.slug)) failures.push(`Duplicate site slug: ${candidate.slug}`);
     seenSlugs.add(candidate.slug);
     const site = getSite(candidate.slug, manifest);
-    assertBuildableSite(site);
-    const { config } = readSiteConfig(site);
     if (candidate.domain) {
       const domain = normalizeDomain(candidate.domain);
       if (seenDomains.has(domain)) failures.push(`Duplicate portfolio domain: ${domain}`);
       seenDomains.add(domain);
+    }
+    if (!candidate.managed && !fs.existsSync(site.directory)) continue;
+    assertBuildableSite(site);
+    const { config } = readSiteConfig(site);
+    if (candidate.domain) {
+      const domain = normalizeDomain(candidate.domain);
       const expected = `https://${candidate.canonicalHost || canonicalHost(domain)}`;
       if (config.baseUrl !== expected) failures.push(`${site.slug}: baseUrl ${config.baseUrl} does not match ${expected}`);
     } else if (candidate.managed && !String(config.baseUrl || "").endsWith(".invalid")) {
