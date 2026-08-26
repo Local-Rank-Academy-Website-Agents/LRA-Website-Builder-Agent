@@ -3,7 +3,7 @@
 ## Delivery summary
 
 - Project: Plumber Houston Pros
-- Delivery date: 2026-08-10
+- Delivery date: 2026-08-26
 - Source location: `projects/plumber-houston-pros/`
 - Production output: `projects/plumber-houston-pros/dist/`
 - Primary contact: Not supplied
@@ -20,41 +20,42 @@
 
 ## Deployment
 
-- Recommended host: Any static host
-- Upload steps: Resolve launch blockers, set the production HTTPS `baseUrl`, enable indexing only when ready, run the production build, and upload the contents of `dist/`.
-- Environment variables: None in the current static test build; document form-handler secrets by name only after integration.
+- Production host: Vercel project `tristans-projects-e26a06f0/plumber-houston-pros`
+- Production recovery URL: `https://plumber-houston-pros.vercel.app`
+- Upload steps: Run `npm run build`, then deploy the linked project with `vercel deploy --prod`.
+- Environment variables: None required by the static site; the public HubSpot form endpoint is configured in `site/assets/lead-routing.js`.
 - Redirects: Configure HTTPS and one preferred hostname.
 - Custom headers: Add sensible security headers at the hosting layer after the form and analytics stack are selected.
-- Domain and DNS: Production domain is undecided; `.invalid` is intentionally non-production.
+- Domain and DNS: `plumberhoustonpros.com` is attached to Vercel but still resolves through ALL-INKL nameservers. Cut over the apex to Vercel after registrar/DNS control is recovered.
 
 ## Lead routing
 
-- Phone status: Form-only; no active number
-- Phone destination: None
-- Form destination: None; browser-side validation only
-- CRM/webhook: None
-- Spam protection: Honeypot markup; server-side controls required before activation
-- Success/error behavior tested: Yes for local validation; no live endpoint exists
+- Phone status: Active CallRail tracking number `832-621-4929`
+- Phone destination: Controlled forwarding destination configured in Local Rank Academy's CallRail account
+- Form destination: HubSpot portal `247139734`, form `076098ff-c93e-4ecc-8d94-0c40fdec45df`
+- CRM/webhook: HubSpot Forms submission API
+- Spam protection: Honeypot and browser-side validation; review HubSpot spam controls periodically
+- Success/error behavior tested: Generated states and deployed client script verified; do not create a live CRM test contact without owner approval
 
 ## SEO and analytics
 
 - Address status: None
 - Address published in content/schema: No
 - Google Business Profile: Not eligible for this lead-generation property
-- Canonical domain: `https://plumber-houston-pros.invalid` until replaced
+- Canonical domain: `https://plumberhoustonpros.com`
 - Sitemap URL after build: `/sitemap.xml`
-- Robots behavior: Full disallow while pre-launch
+- Robots behavior: Index/follow with `Allow: /`; 404 remains noindex
 - Structured data: `WebSite`, `Organization`, `BreadcrumbList`, and truthful `Service` records without fabricated local address, phone, rating, or active coverage
 - Analytics: None
 - Search Console: Not configured
-- Consent: Reassess before analytics, advertising, call tracking, or live form processing
+- Consent: Privacy page discloses HubSpot form intake and CallRail forwarding/possible recording; reassess before adding analytics or advertising pixels
 
 ## Verification completed
 
 - [x] Mobile and desktop layouts inspected at 390×844 and 1440×900
 - [x] Desktop and mobile navigation tested
-- [x] Browser-only form validation and success/error states tested
-- [x] No placeholder phone or email links are published
+- [x] Live form validation and HubSpot success/error states generated
+- [x] Active CallRail phone links are published sitewide
 - [x] Titles, descriptions, canonicals, and social metadata checked
 - [x] Every title tag exactly equals its visible H1
 - [x] Homepage H1 targets plumbing services with the Greater Houston modifier
@@ -68,7 +69,7 @@
 - [x] Every area page links to all 54 service pages and its regional peers
 - [x] No approved route is orphaned
 - [x] Structured data parses as valid JSON
-- [x] Phone, address, and Google Business Profile output matches the pre-launch status
+- [x] Phone, address, and Google Business Profile output matches the independent lead-generation status
 - [x] Broken internal references and missing assets checked
 - [x] Console checked with no errors or warnings during representative form testing
 - [x] Page-specific content audit passed: zero exact duplicate paragraphs; maximum similarity 49.5%
@@ -77,19 +78,19 @@
 
 ## Post-deployment smoke test
 
-- [ ] Verify HTTPS and preferred-domain redirect
-- [ ] Re-test every lead action on the live domain
+- [x] Verify HTTPS on the Vercel production alias
+- [ ] Re-test every lead action on the custom domain after DNS cutover
 - [ ] Confirm analytics only after it is intentionally configured
 - [ ] Submit sitemap in Search Console
-- [ ] Inspect key URLs for indexability
-- [ ] Check live redirects, real 404 response, favicon, and social preview
+- [x] Inspect key Vercel URLs for indexability
+- [x] Check Vercel routes, real 404 response, favicon, and console
 
 ## Remaining launch dependencies
 
-See `LAUNCH-BLOCKERS.md`: operator, verified capabilities/coverage, domain, form destination, privacy contact, live routing/security, and optional analytics remain unresolved.
+See `LAUNCH-BLOCKERS.md`: custom-domain DNS control, provider qualification/coverage checks, stronger spam/retention controls, and optional analytics remain unresolved.
 
 ## Known limitations
 
-- The site is intentionally non-indexable and non-routing.
-- Hyper-local service coverage is mapped for future verification and is not an active availability claim.
+- The Vercel recovery deployment is indexable and routes calls/forms; the custom domain still serves the ALL-INKL copy until DNS control is recovered.
+- Hyper-local pages accept requests but do not guarantee provider availability for every service/ZIP combination.
 - The static preview server serves the 404 document for missing routes; production host status-code behavior must be configured and tested.

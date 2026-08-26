@@ -1,6 +1,6 @@
 # Content and SEO Audit
 
-Generated: 2026-08-25T23:18:52.720Z
+Generated: 2026-08-26T17:58:42.826Z
 
 ## Inventory
 
@@ -21,7 +21,7 @@ Generated: 2026-08-25T23:18:52.720Z
 ## Uniqueness analysis
 
 - Exact duplicate page-specific paragraphs: 0
-- Highest five-word-shingle similarity: 49.5%
+- Highest five-word-shingle similarity: 49.1%
 - Closest pair: /services/appliance-water-line/ and /services/refrigerator-water-line/
 - Failure threshold: 65.0%
 - Result: PASS

@@ -1,8 +1,8 @@
 export const site = {
   name: "Plumber Houston Pros",
   shortName: "PHP",
-  description: "A pre-launch plumbing service-matching resource for Greater Houston properties.",
-  status: "Pre-launch rank-and-rent property — operator and coverage verification required",
+  description: "An independent plumbing information and service-request resource for Greater Houston properties.",
+  status: "Independent Houston plumbing request line — availability confirmed after intake",
 };
 
 const S = (slug, label, group, situation, system, outcome, considerations, related) => ({

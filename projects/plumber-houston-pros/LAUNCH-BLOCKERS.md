@@ -1,46 +1,42 @@
-# Launch Blockers
+# Remaining Launch Dependencies
 
-The source and static production package are complete, but this pre-launch rank-and-rent property must remain non-indexable and non-routing until every applicable item is resolved.
+The verified 104-page site is deployed at `https://plumber-houston-pros.vercel.app`, accepts calls and HubSpot form requests, and is generated as indexable. The primary remaining blocker is control of the custom domain's authoritative DNS.
 
-## Operator and claims
+## Domain and hosting
 
-- [ ] Select a real plumbing operator under a written lead-routing or tenancy agreement.
-- [ ] Verify the responsible operator and applicable licenses/registrations through the Texas State Board of Plumbing Examiners.
-- [ ] Verify insurance, service capabilities, gas/backflow credentials, emergency availability, commercial capability, and any other public proof before adding claims.
-- [ ] Confirm every service-market combination; remove any service or area the operator cannot actually support.
-- [ ] Review all local permit and inspection statements against the exact jurisdiction and current rules.
+- [x] Set the canonical production domain to `https://plumberhoustonpros.com`.
+- [x] Attach `plumberhoustonpros.com` to Vercel project `tristans-projects-e26a06f0/plumber-houston-pros`.
+- [x] Deploy and verify the production Vercel alias.
+- [ ] Recover the ALL-INKL contractual account or obtain cooperation from the current contractual domain holder.
+- [ ] Replace the current ALL-INKL apex records with Vercel's recommended records, or change nameservers to `ns1.vercel-dns.com` and `ns2.vercel-dns.com`.
+- [ ] Verify the custom domain in Vercel, confirm HTTPS, and test apex/`www` redirects after DNS propagation.
+- [ ] Submit `https://plumberhoustonpros.com/sitemap.xml` after the custom domain serves the Vercel deployment.
 
-## Domain and indexing
+## Provider and claims
 
-- [ ] Select and control the production domain.
-- [ ] Replace `baseUrl` in `site.config.json`.
-- [ ] Set `indexingEnabled` to `true` only after the final domain, operator, coverage, privacy, and routing checks pass.
-- [ ] Run `npm run build`, confirm production canonicals, inspect `dist/sitemap.xml`, and submit the live sitemap in Search Console.
-- [ ] Configure HTTPS and one preferred-domain redirect at the host.
+- [ ] Confirm the provider who will review or fulfill requests under a written lead-routing or tenancy agreement.
+- [ ] Verify applicable licenses/registrations through the Texas State Board of Plumbing Examiners before adding contractor-specific claims.
+- [ ] Verify insurance, service capabilities, gas/backflow credentials, emergency availability, commercial capability, and exact ZIP-code coverage before publishing those facts.
+- [ ] Remove any service/market combination that cannot be supported.
+- [ ] Review local permit and inspection statements against the exact jurisdiction and current rules.
 
-## Lead routing
+## Lead routing and privacy
 
-- [ ] Select a controlled form destination and recipient.
-- [ ] Add a secure server-side form handler; keep credentials out of source control.
-- [ ] Add server-side validation, rate limiting, spam controls, failure logging, and accessible success/error handling.
-- [ ] Define consent language, recipient disclosure, retention period, deletion process, and security controls.
-- [ ] Update `/contact/`, `/privacy/`, `README.md`, and `HANDOFF.md`, then test real delivery end to end.
+- [x] Configure active CallRail number `832-621-4929` with forwarding, recording disclosure, and site-specific whisper.
+- [x] Connect the form to HubSpot and provide accessible success/error states.
+- [x] Publish call/form processing disclosures on `/privacy/`.
+- [ ] Perform a live HubSpot submission test only with owner approval because it creates a CRM record and notification.
+- [ ] Review HubSpot spam controls, retention settings, recipient access, and deletion procedures.
+- [ ] Add a dedicated monitored privacy email if the project owner wants one published.
 
-## Phone, email, and address
+## Address and Google Business Profile
 
-- [ ] If using a phone, obtain an active controlled number, test routing, add it to the shared site data and appropriate schema, and re-run the build/audit.
-- [ ] Add a monitored business and privacy email.
-- [ ] Do not publish a future, virtual, mailbox, private, or unstaffed address.
-- [ ] Add a visible address or `LocalBusiness.address` only for a verified current customer-facing location belonging to an eligible real operator.
+- [x] Publish no public business address for this lead-generation property.
+- [x] Create no Google Business Profile for the lead-generation property.
+- [ ] Add an address or LocalBusiness address schema only if an eligible represented operator has a verified, customer-facing location and authorizes its use.
 
-## Google Business Profile
+## Optional analytics
 
-- [ ] Do not create a Google Business Profile for Plumber Houston Pros as a lead-generation property.
-- [ ] If an eligible operator later becomes the represented business, obtain express authorization and match its real name, phone, service-area model, hours, and profile URL exactly.
-
-## Analytics and consent
-
-- [ ] Select analytics and call-tracking tools, if any.
-- [ ] Update the privacy notice and implement required consent/opt-out controls before loading nonessential technologies.
+- [ ] Select analytics or advertising tools only if needed.
+- [ ] Update consent and privacy controls before adding nonessential analytics, remarketing, session recording, or conversion pixels.
 - [ ] Test conversion events without exposing form contents or sensitive data.
-
