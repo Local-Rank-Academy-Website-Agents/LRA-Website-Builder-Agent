@@ -33,8 +33,9 @@
       "directory": "projects/hydro-jetting-houston",
       "vercelProject": "hydro-jetting-houston",
       "vercelProjectId": "prj_ElxEW9sUYnutmvd33iDJVcHhk6Gd",
-      "domain": null,
-      "status": "build-ready",
+      "domain": "hydrojetting-houston.com",
+      "canonicalHost": "www.hydrojetting-houston.com",
+      "status": "production-noindex",
       "managed": true,
       "operatorStatus": "awaiting-operator",
       "leadRoutingStatus": "not-connected"

@@ -2,7 +2,8 @@
 
 - [ ] Contract with and verify a real operator.
 - [ ] Verify applicable licenses, insurance, equipment, services, operating model, and every ZIP-code/service combination.
-- [ ] Select a production domain; replace baseUrl and enable indexing only after all launch checks.
+- [x] Select a production domain and replace the placeholder baseUrl.
+- [ ] Enable indexing only after all operator and launch checks pass.
 - [ ] Connect a secure form endpoint, verified recipients, spam controls, consent, monitoring, retention, and deletion procedures.
 - [ ] Add a monitored business and privacy email.
 - [ ] Add an active controlled phone only after routing is tested.

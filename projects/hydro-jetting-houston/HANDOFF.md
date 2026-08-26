@@ -1,7 +1,7 @@
 # Website Handoff
 
 - Project: Hydro Jetting Houston
-- Delivery date: 2026-08-25
+- Delivery date: 2026-08-26
 - Source: this project directory
 - Production output: dist/
 - Install: npm install
@@ -11,7 +11,7 @@
 - Form: Browser-only validation; no destination
 - Address: None
 - GBP: Not eligible for the rank-and-rent property
-- Canonical: Reserved .invalid placeholder
+- Canonical: https://www.hydrojetting-houston.com
 - Robots: Full disallow while pre-launch
 - Analytics: None
 - Environment variables: None

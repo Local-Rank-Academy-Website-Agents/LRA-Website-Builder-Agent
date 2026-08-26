@@ -3,6 +3,8 @@ import path from "node:path";
 import process from "node:process";
 import { areas, project } from "./site-data.mjs";
 const root=process.cwd(), today=new Date().toISOString().slice(0,10), clean=v=>String(v).replaceAll("|","/").replaceAll("\n"," ");
+const siteConfig=JSON.parse(fs.readFileSync(path.join(root,"site.config.json"),"utf8"));
+const hasProductionDomain=!siteConfig.baseUrl.endsWith(".invalid");
 const rows=["# Keyword Map","",`Generated from the shared service and market data for ${project.name}. Service pages intentionally use topic-only keywords and headings; Houston is added to the research query for local SERP comparison, while location intent belongs to the service-area pages. See SERP-CONTENT-GAPS.md for live result evidence and page-specific gap assignments.`,"","## Homepage target","","| Broadest topic keyword | Greater-area modifier | Required H1 and exact title | Primary homepage services | Decision |","| --- | --- | --- | --- | --- |",`| ${project.topic.toLowerCase()} | Greater Houston Area | ${project.homepageH1} | ${project.services.slice(0,8).map(s=>s.label).join("; ")} | Approve |`,"","## Service targets","","| Service | Published primary keyword | Houston research query | Canonical | Required H1 and exact title | Group | Related services | Area links | Decision |","| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |"]; 
 for(const s of project.services)rows.push(`| ${clean(s.label)} | ${clean(s.keyword)} | ${clean(s.label)} Houston TX | /services/${s.slug}/ | ${clean(s.h1)} | ${clean(s.group)} | ${s.related.map(x=>`/services/${x}/`).join("; ")} | All ${areas.length} area guides | Approve |`);
 rows.push("","## Candidate consolidation and cannibalization rules","","- Wording-only synonyms merge into the nearest approved service owner.","- The site does not create separate emergency, 24-hour, near-me, price, cost, or ZIP-code doorway pages.","- Service pages are separated only by material system, symptom, diagnostic deliverable, work method, property type, safety scope, or maintenance intent.","- Unsupported specialties, guaranteed response times, pricing claims, and credentials remain excluded until an operator verifies them.","","## Service-area targets","","| Area | Region | Coverage | Primary keyword and research query | Canonical | Required H1 and exact title | Unique local value | Decision |","| --- | --- | --- | --- | --- | --- | --- | --- | --- |");
@@ -20,4 +22,21 @@ const readme=`# ${project.name}\n\nPortable static rank-and-rent build with ${ro
 fs.writeFileSync(path.join(root,"README.md"),readme,"utf8");
 const handoff=`# Website Handoff\n\n- Project: ${project.name}\n- Delivery date: ${today}\n- Source: this project directory\n- Production output: dist/\n- Install: npm install\n- Preview: npm run dev at http://localhost:${project.previewPort}/\n- Build: npm run build\n- Phone: None\n- Form: Browser-only validation; no destination\n- Address: None\n- GBP: Not eligible for the rank-and-rent property\n- Canonical: Reserved .invalid placeholder\n- Robots: Full disallow while pre-launch\n- Analytics: None\n- Environment variables: None\n\n## Verified\n\n- [x] Exact title/H1 alignment\n- [x] Unique titles, descriptions, and canonicals\n- [x] Unique page-specific FAQs and substantive copy\n- [x] Complete services and markets in navigation, footer, and sitemap generation\n- [x] Four related-service links and all market links on every service page\n- [x] All service links and regional peer links on every area page\n- [x] Structured data JSON parsing\n- [x] Broken-link and orphan checks\n- [x] Pre-launch phone/address/GBP truth rules\n- [x] Production build\n\nSee CONTENT-AUDIT.md and LAUNCH-BLOCKERS.md.\n`;
 fs.writeFileSync(path.join(root,"HANDOFF.md"),handoff,"utf8");
+if(hasProductionDomain){
+  const replaceIn=(file,replacements)=>{
+    const target=path.join(root,file);
+    let content=fs.readFileSync(target,"utf8");
+    for(const [from,to] of replacements)content=content.replace(from,to);
+    fs.writeFileSync(target,content,"utf8");
+  };
+  replaceIn("PROJECT-BRIEF.md",[
+    ["- Domain: Undecided; reserved placeholder in site.config.json",`- Domain: ${siteConfig.baseUrl}`],
+    ["- Deployment: Not requested","- Deployment: Vercel production, noindex"],
+    ["- Indexing: Disabled until domain, operator, coverage, privacy, and routing verification","- Indexing: Disabled until operator, coverage, privacy, and routing verification"]
+  ]);
+  replaceIn("LAUNCH-BLOCKERS.md",[
+    ["- [ ] Select a production domain; replace baseUrl and enable indexing only after all launch checks.","- [x] Select a production domain and replace the placeholder baseUrl.\n- [ ] Enable indexing only after all operator and launch checks pass."]
+  ]);
+  replaceIn("HANDOFF.md",[["- Canonical: Reserved .invalid placeholder",`- Canonical: ${siteConfig.baseUrl}`]]);
+}
 console.log(`Generated project documents for ${routeRows.length} routes.`);

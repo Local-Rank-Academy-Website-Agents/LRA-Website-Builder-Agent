@@ -67,7 +67,7 @@ if (domain) {
     if (added.status !== 0 && !/already|configured|verified|exists/i.test(combined)) throw new Error(`Unable to attach ${candidate} to Vercel: ${combined.trim()}`);
   }
 
-  const firstVerification = runVercel(["domains", "verify", host], { cwd: site.directory });
+  const firstVerification = runVercel(["domains", "verify", host], { cwd: site.directory, allowFailure: true });
   const verification = parseJsonOutput(firstVerification.stdout);
   const recommended = verification.recommended?.records?.find((record) => record.type === "CNAME") || verification.recommended?.cname?.[0];
   const target = typeof recommended?.value === "string" ? recommended.value : Array.isArray(recommended?.value) ? recommended.value[0] : null;
