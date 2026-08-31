@@ -1,0 +1,19 @@
+{
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
+  "cleanUrls": true,
+  "trailingSlash": true,
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "repiping-houston.com"
+        }
+      ],
+      "destination": "https://www.repiping-houston.com/:path*",
+      "permanent": true
+    }
+  ]
+}
