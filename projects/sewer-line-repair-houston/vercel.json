@@ -9,10 +9,10 @@
       "has": [
         {
           "type": "host",
-          "value": "sewerline-repairhouston.com"
+          "value": "sewerlinerepair-houston.com"
         }
       ],
-      "destination": "https://www.sewerline-repairhouston.com/:path*",
+      "destination": "https://www.sewerlinerepair-houston.com/:path*",
       "permanent": true
     }
   ]

@@ -4,7 +4,7 @@
 - Primary market: Greater Houston, Texas
 - Primary topic: sewer line repair
 - Brand: Sewer Line Repair Houston Pros
-- Intended domain: `sewerline-repairhouston.com`
+- Intended domain: `sewerlinerepair-houston.com`
 - Hosting: Vercel static deployment
 - Primary conversion: HubSpot service-request form
 - Phone: planned CallRail number, not yet assigned

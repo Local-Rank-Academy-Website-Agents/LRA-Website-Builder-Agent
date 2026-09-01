@@ -1,6 +1,6 @@
 # Launch Blockers
 
-- [ ] Purchase or transfer control of `sewerline-repairhouston.com`.
+- [x] Purchase or transfer control of `sewerlinerepair-houston.com`.
 - [x] Attach the apex and `www` hostname to the independent Vercel project.
 - [ ] After purchase, create the Cloudflare DNS records for the apex and `www` hostnames pointing to `76.76.21.21`, then verify Vercel SSL.
 - [ ] Assign a Local Rank Academy CallRail tracking number forwarding to `806-206-6115`; enable the requested whisper and recording disclosure before publishing it.

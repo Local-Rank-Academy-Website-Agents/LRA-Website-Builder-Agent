@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://www.sewerline-repairhouston.com/sitemap.xml
+Sitemap: https://www.sewerlinerepair-houston.com/sitemap.xml
