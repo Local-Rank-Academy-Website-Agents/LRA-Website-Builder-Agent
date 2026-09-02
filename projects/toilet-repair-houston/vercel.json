@@ -2,5 +2,18 @@
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
   "cleanUrls": true,
-  "trailingSlash": true
+  "trailingSlash": true,
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "toiletrepair-houston.com"
+        }
+      ],
+      "destination": "https://www.toiletrepair-houston.com/:path*",
+      "permanent": true
+    }
+  ]
 }

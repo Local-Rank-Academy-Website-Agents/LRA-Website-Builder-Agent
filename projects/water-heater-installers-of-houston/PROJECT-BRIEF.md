@@ -3,7 +3,7 @@
 - Operating status: independent rank-and-rent property awaiting a qualified operator
 - Primary market: Greater Houston, Texas
 - Primary topic: water heater installation and replacement
-- Intended domain: `waterheaterinstallation-houston.com` (not yet purchased)
+- Production domain: `https://www.waterheaterinstallation-houston.com`
 - Hosting: Vercel static deployment
 - Primary conversion: HubSpot service-request form
 - Phone: planned later; no number is published
