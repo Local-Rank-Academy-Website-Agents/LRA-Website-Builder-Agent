@@ -1,3 +1,3 @@
 # Build Request
 
-Build Water Heater Installers of Houston locally as an independent Greater Houston rank-and-rent website. Create a distinct water heater installation service architecture, 43 useful hyper-local market pages, reciprocal internal linking, exact title/H1 alignment, unique FAQs and content, a non-routing form, technical SEO files, automated duplicate-content checks, and a portable production package. Do not deploy or invent business facts.
+Build a complete Greater Houston water-heater-installation rank-and-rent website using Sora and original imagery. Create one canonical page for each approved service, one useful market guide for every mapped area, and a one-to-one city/service page for each combination. Area pages must link to the matching service page for that same city. Use form-first HubSpot conversion until a controlled phone number is assigned. Keep the unpurchased-domain preview blocked from indexing.

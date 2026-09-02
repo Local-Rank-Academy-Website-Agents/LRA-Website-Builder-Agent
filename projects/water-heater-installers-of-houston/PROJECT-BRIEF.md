@@ -1,17 +1,21 @@
-# Project Brief
+# Water Heater Installation Houston Pros: Project Brief
 
-- Project: Water Heater Installers of Houston
-- Operating status: Rank-and-rent property awaiting an operator
-- Primary niche: Water Heater Installation
+- Operating status: independent rank-and-rent property awaiting a qualified operator
 - Primary market: Greater Houston, Texas
-- Domain: Undecided; reserved placeholder in site.config.json
-- Phone: Form-only; no active number supplied
-- Address: None
-- Google Business Profile: Not eligible for this lead-generation property
-- Lead destination: Not connected
-- Deployment: Not requested
-- Stack: Portable zero-dependency static HTML/CSS/JavaScript
-- Pages: 64 total; 14 services; 43 hyper-local markets
-- Indexing: Disabled until domain, operator, coverage, privacy, and routing verification
-- Analytics: None
-- Verified business claims: None supplied; no reviews, licenses, hours, guarantees, prices, staff, or address published
+- Primary topic: water heater installation and replacement
+- Intended domain: `waterheaterinstallation-houston.com` (not yet purchased)
+- Hosting: Vercel static deployment
+- Primary conversion: HubSpot service-request form
+- Phone: planned later; no number is published
+- Address and Google Business Profile: none
+- Font: self-hosted Sora, weights 400 through 800
+- Media: original AI-generated water-heater installation photograph
+- Claims excluded: licenses, reviews, staff, years, guarantees, prices, dispatch availability, rankings, address, and project history
+
+## Intended service inventory
+
+Water heater installation, replacement, tankless installation, gas installation, electric installation, and commercial installation.
+
+## Intended geography
+
+Houston and 42 Greater Houston cities, communities, neighborhoods, and districts. Exact operator and ZIP-code coverage must be verified before fulfillment.

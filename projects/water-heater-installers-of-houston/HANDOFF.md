@@ -1,32 +1,5 @@
-# Website Handoff
+# Handoff
 
-- Project: Water Heater Installers of Houston
-- Delivery date: 2026-08-25
-- Source: this project directory
-- Production output: dist/
-- Install: npm install
-- Preview: npm run dev at http://localhost:4183/
-- Build: npm run build
-- Phone: None
-- Form: Browser-only validation; no destination
-- Address: None
-- GBP: Not eligible for the rank-and-rent property
-- Canonical: Reserved .invalid placeholder
-- Robots: Full disallow while pre-launch
-- Analytics: None
-- Environment variables: None
+Run `npm run build` for the validated static output in `dist/`. The current Vercel project is `water-heater-installation-houston`, with its production preview at `https://water-heater-installation-houston.vercel.app/`.
 
-## Verified
-
-- [x] Exact title/H1 alignment
-- [x] Unique titles, descriptions, and canonicals
-- [x] Unique page-specific FAQs and substantive copy
-- [x] Complete services and markets in navigation, footer, and sitemap generation
-- [x] Four related-service links and all market links on every service page
-- [x] All service links and regional peer links on every area page
-- [x] Structured data JSON parsing
-- [x] Broken-link and orphan checks
-- [x] Pre-launch phone/address/GBP truth rules
-- [x] Production build
-
-See CONTENT-AUDIT.md and LAUNCH-BLOCKERS.md.
+Form submissions route to the configured HubSpot endpoint in `site/assets/lead-routing.js`. No secret values are stored in source control. The preview intentionally uses `noindex` and a disallowing robots file because the final domain has not been purchased. Follow `LAUNCH-BLOCKERS.md` after domain purchase.

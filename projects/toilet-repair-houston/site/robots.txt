@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: /
+Sitemap: https://toiletrepair-houston.com/sitemap.xml

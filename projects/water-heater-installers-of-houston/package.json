@@ -1,5 +1,6 @@
 {
-  "name": "water-heater-installers-of-houston",
+  "name": "water-heater-installation-houston",
+  "version": "1.0.0",
   "private": true,
   "type": "module",
   "scripts": {
